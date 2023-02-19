@@ -1,7 +1,0 @@
-api/util/Constants.class
-api/model/Order.class
-api/model/Login.class
-api/client/OrdersClient.class
-api/client/CourierClient.class
-api/model/Courier.class
-api/util/Methods.class
