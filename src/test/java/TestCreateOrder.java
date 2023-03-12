@@ -44,7 +44,7 @@ public class TestCreateOrder extends Constants {
         this.colorValue = colorValue;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters (name = "Авторизация пользователя. Тестовые данные: {0} {1}")
     public static Object[][] getTestDataCreateOrder() {
         return new Object[][]{
                 {"Тест", "Тестович", "Комсомольская 10", 10, "8348358374", 2, "2023-01-15", "2-й подъезд", null},

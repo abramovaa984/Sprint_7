@@ -24,6 +24,7 @@ public class TestListOrders extends Constants {
                 .header("Content-type", "application/json")
                 .get(API_ORDER);
         response.then().log().all()
+                .statusCode(200)
                 .assertThat()
                 .body("orders", notNullValue());
     }

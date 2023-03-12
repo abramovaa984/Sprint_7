@@ -2,12 +2,14 @@ package api.util;
 
 import api.model.Courier;
 import api.model.Login;
+import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 
 public class Methods extends Constants {
 
+    @Step ("Удаление логина")
     public void deleteLogin() {
         Login login = new Login(existingLogin, existingLoginPassword);
         Response response =
@@ -23,6 +25,7 @@ public class Methods extends Constants {
                 .delete(API_LOGIN + id);
     }
 
+    @Step ("Создание аккаунта")
     public void createAccount() {
         Courier successfulCourier = new Courier(existingLogin, existingLoginPassword, existingLoginFirstName);
         given()
